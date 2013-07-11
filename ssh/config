@@ -1,0 +1,11 @@
+ControlMaster auto
+ControlPath ~/.ssh/socket-%r@%h:%p
+ControlPersist 1m
+
+ForwardX11 yes
+ForwardX11Timeout 1w
+
+ConnectTimeout 15
+
+ServerAliveInterval 5
+ServerAliveCountMax 3
