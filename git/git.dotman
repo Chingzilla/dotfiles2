@@ -1,0 +1,3 @@
+# Git configuration files
+gitconfig>~/.gitconfig
+gitignore^~/.gitignore
