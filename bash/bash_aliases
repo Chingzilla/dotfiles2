@@ -1,0 +1,28 @@
+#Color alias
+alias rm='rm -I'
+alias mv='mv -i'
+alias cp='cp -i'
+
+alias ls='ls --color=auto'
+alias grep='grep --colour=auto'
+
+alias wget='wget -c'
+
+#long listing
+alias lsl="ls -l"
+
+#git alias
+alias g="git"
+alias ga="git add"
+alias gc="git commit"
+alias gst="git status"
+alias glg="git log"
+alias gdiff="git diff"
+
+#todo.txt alias
+alias t="todo.sh"
+alias ta="todo.sh add"
+alias tls="todo.sh ls"
+alias tl="todo.sh ls"
+alias td="todo.sh do"
+alias tr="todo.sh do"

@@ -1,0 +1,58 @@
+#Load bash_profile
+source ~/.bash_profile
+
+#Set terminal to vi mode
+set -o vi
+
+# Setup PS1
+#Setup Colors
+txtmain='\e[1;34m' # Blue, Bold
+txtsec='\e[1;31m'  # Red Bold
+txtred='\e[1;31m'  # Red Bold
+txtreset='\e[0m'
+
+if [ ${EUID} == 0 ] ; then
+        PS1='\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\]' # Root PS1
+else
+    if [ ${SSH_TTY} ]; then
+        if [ -f /usr/bin/figlet ]; then
+            hostname | figlet
+        else
+            echo "------------------------"
+            echo "You are on ${HOSTNAME}"
+            echo "------------------------"
+        fi
+        
+        PS1="\[$txtmain\]\u@\h\[$txtsec\] \w\[$txtmain\] \$ \[$txtreset\]"
+    else
+        PS1="\[$txtmain\]\u\[$txtsec\] \w\[$txtmain\] \$ \[$txtreset\]"
+
+    fi
+fi
+
+    complete -cf sudo
+    export PATH=$PATH:/sbin:/usr/sbin
+
+#Bash history completion
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
+# Set Custom vaules
+export PYTHONDOCS=/usr/share/doc/python/html/
+export HISTCONTROL=ignoredups
+
+## Aliases
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+## Local rc configuartion
+if [ -f ~/.bashrc_local ]; then
+   source ~/.bashrc_local
+fi
+
+unset txtmain
+unset txtsec
+unset txtred
+unset txtreset
+
