@@ -33,6 +33,9 @@ fi
     complete -cf sudo
     export PATH=$PATH:/sbin:/usr/sbin
 
+# Set shell options
+shopt -s autocd cdable_vars cdspell checkhash
+
 #Bash history completion
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
