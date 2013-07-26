@@ -1,2 +1,2 @@
 # Vim configuration files
-vimrc^~/.vimrc
+copy vimrc ~/.vimrc

@@ -1,2 +1,2 @@
-# Deploy ssh configuartion
-config>~/.ssh/config
+# Deploy ssh configuration
+link config ~/.ssh/config

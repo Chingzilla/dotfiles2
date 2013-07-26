@@ -1,0 +1,5 @@
+# Bash configuration files
+copy bashrc ~/.bashrc
+link bashrc_local ~/.bashrc_local
+link bash_profile ~/.bash_profile
+link bash_aliases ~/.bash_aliases

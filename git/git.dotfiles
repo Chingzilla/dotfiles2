@@ -1,0 +1,3 @@
+# Git configuration files
+link gitconfig ~/.gitconfig
+copy gitignore ~/.gitignore
